@@ -1,62 +1,82 @@
 # Typescript
 
-## GetStaticProps
+- To get started create `tsconfig.json` file in the root directory and `git add --dev typescript @types/react @types/node`
+- Strict Mode is turned off by default
+- Automatically supports `paths` and `baseUrl` options in `tsconfig.json`
 
-`import { GetStaticProps } from 'next'`
+## GetStaticProps, GetStaticPaths, GetServerSideProps
 
 ```ts
-import { InferGetStaticPropsType } from 'next';
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 
-type Post = {
-  author: string;
-  content: string;
+export const getStaticProps: GetStaticProps = async (context) => {
+  // ...
 };
 
-export const getStaticProps = async () => {
-  const res = await fetch('https://.../posts');
-  const posts: Post[] = await res.json();
-
-  return {
-    props: {
-      posts,
-    },
-  };
+export const getStaticPaths: GetStaticPaths = async () => {
+  // ...
 };
 
-function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
-  // will resolve posts to type Post[]
-}
-
-export default Blog;
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // ...
+};
 ```
 
-## GetStaticPaths
-
-`import { GetStaticPaths } from 'next'`
-
-## GetServerSideProps
-
-`import { GetServerSideProps } from 'next'`
+## Api Routes
 
 ```ts
-import { InferGetServerSidePropsType } from 'next'
+import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = { ... }
+export default (req: NextApiRequest, res: NextApiResponse) => {
+  res.status(200).json({ name: "John Doe" });
+};
+```
 
-export const getServerSideProps = async () => {
-  const res = await fetch('https://.../data')
-  const data: Data = await res.json()
+#### Typing Response Data
 
-  return {
-    props: {
-      data,
-    },
-  }
+```ts
+import type { NextApiRequest, NextApiResponse } from "next";
+
+type Data = {
+  name: string;
+};
+
+export default (req: NextApiRequest, res: NextApiResponse<Data>) => {
+  res.status(200).json({ name: "John Doe" });
+};
+```
+
+## App Component
+
+```ts
+// pages/_app.tsx
+
+// import App from "next/app";
+import type { AppProps /*, AppContext */ } from "next/app";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
 
-function Page({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  // will resolve posts to type Data
-}
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// MyApp.getInitialProps = async (appContext: AppContext) => {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
 
-export default Page
+//   return { ...appProps }
+// }
+
+export default MyApp;
+```
+
+## NextApiRequest, NextApiResponse
+
+```ts
+import { NextApiRequest, NextApiResponse } from "next";
+
+const handler = (req: NextApiRequest, res: NextApiResponse) => {};
 ```
