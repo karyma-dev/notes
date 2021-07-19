@@ -1,2 +1,2 @@
-- [Home](/)
+- [Git](git/)
 - [Javascript](javascript/)
