@@ -1,5 +1,13 @@
+- [Bash](bash.md)
+- [CSS](css.md)
+- [Electron](javascript/)
 - [Git](git/)
-
-  - [Hello](git/hello.md)
-
+- [Graphql](graphql.md)
+- [Java](java.md)
 - [Javascript](javascript/)
+- [Jest](jest.md)
+- [Python](python.md)
+- [Regex](regex.md)
+- [Seo Optimization](seo_optimization.md)
+- [React Testing Library](testing_library_react.md)
+- [Typescript](typescript.md)
