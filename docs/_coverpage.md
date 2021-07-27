@@ -7,4 +7,4 @@
 - Personal development handbook created by [Kary Ma](https://www.karyma.ca).
 
 [GitHub](https://github.com/karyma101/notes)
-[Get Started](/#Mainly-for-personal-use)
+[Get Started](/#Under-Construction)

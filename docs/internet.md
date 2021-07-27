@@ -36,4 +36,15 @@ A technical infrastructure which allows billions of computers to be connected al
 - If server approves of request, the server sends a response code and data in a series of chunks called data packets
 - Browser assembles these data packets into a complete webpage and displays it
 - HTML > DOM > CSS > JAVASCRIPT, order of which things get parsed
--
+
+### Difference between webpage, website, web server and search engine
+
+- Webpage
+  - A document which can be displayed in a web browser such as Firefox, Google Chrome, Opera, Microsoft Internet Explorer or Edge, or Apple's Safari
+- Website
+  - A collection of web pages which are grouped together and usually connected together in various ways.
+- Web Server
+  - A computer that hosts a website on the Internet
+  - May contain multiple websites
+- Search Engine
+  - A web service that helps you find other web pages and are normally accessed through a web browser
