@@ -1,3 +1,6 @@
 # Commands
 
-`git checkout -b branchName`
+| Action                | Command                    |
+| --------------------- | -------------------------- |
+| Creating a new branch | git checkout -b branchName |
+| Switching branch      | git checkout branchName    |
