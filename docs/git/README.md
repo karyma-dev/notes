@@ -27,9 +27,3 @@ Git is a free and open source version control system, originally created by Linu
     - Let's say you have created a branch for the purpose of developing a single feature. When you want to bring those changes back to master, you probably want merge (you don't care about maintaining all of the interim commits).
 - Rebase
     - A second scenario would be if you started doing some development and then another developer made an unrelated change. You probably want to pull and then rebase to base your changes from the current version from the repository.
-
-## Commands
-
-- Creating a new branch
-    - `git checkout -b branchName`
-- 
