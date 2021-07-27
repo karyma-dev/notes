@@ -4,7 +4,7 @@ Git is a free and open source version control system, originally created by Linu
 
 ## Overview
 
-### Basic overview of how git works :
+### Basic overview of how git works
 
 1. Create a "repository" (project) with a git hosting tool (like Bitbucket)
 2. Copy (or clone) the repository to your local machine
