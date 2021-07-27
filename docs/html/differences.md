@@ -1,8 +1,4 @@
-# HTML
-
-Hypertext Markup Language is the most basic building block of the Web, it defines the meaning and structure of web content.
-
-### HTML vs HTML5
+### HTML5
 
 | HTML                                                                                                               | HTML5                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
