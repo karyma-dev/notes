@@ -2,6 +2,7 @@
 - [CSS](css.md)
 - [Electron](electron.md)
 - [Git](git/)
+  - [Commands](git/commands)
 - [Graphql](graphql.md)
 - [HTML](html/)
   - [Accessibility](html/accessibility)
