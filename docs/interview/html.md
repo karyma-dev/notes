@@ -1,3 +1,5 @@
+# HTML Interview Questions
+
 **Why you would use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.**  
 The srcset attribute is used to serve different size images to different display widths. This will increase the performance on smaller devices and provide higher quality for bigger screens.
 
@@ -12,3 +14,8 @@ Cookie, sessionStorage and localStorage are client side technology for storing d
 
 **What are data- attributes good for?**  
 Generally no encourged to use them anymore unless it for testing. The data- attribute was used
+
+**What kind of things must you be wary of when designing or developing for multilingual sites?**
+Make sure you use `lang` attribute in your html tag. Allow user to switch language easily.
+
+**What does a DOCTYPE do?**
