@@ -1,8 +1,10 @@
 # Git
 
-Git is a free and open source version control system, originally created by Linus Torvalds in 2005.[Cheatsheet](cheatsheet.pdf)
+> Git is a free and open source version control system, originally created by Linus Torvalds in 2005.
 
 ## Overview
+
+---
 
 ### Basic overview of how git works
 
@@ -23,7 +25,7 @@ Git is a free and open source version control system, originally created by Linu
 
 ### Rebase vs Merge
 
-- Merge
-    - Let's say you have created a branch for the purpose of developing a single feature. When you want to bring those changes back to master, you probably want merge (you don't care about maintaining all of the interim commits).
-- Rebase
-    - A second scenario would be if you started doing some development and then another developer made an unrelated change. You probably want to pull and then rebase to base your changes from the current version from the repository.
+- **Merge**
+  - Let's say you have created a branch for the purpose of developing a single feature. When you want to bring those changes back to master, you probably want merge (you don't care about maintaining all of the interim commits).
+- **Rebase**
+  - A second scenario would be if you started doing some development and then another developer made an unrelated change. You probably want to pull and then rebase to base your changes from the current version from the repository.
