@@ -105,3 +105,12 @@ D3 simplifies the process of animations with transitions. Transitions are made o
 | .enter() | Creates a selection with placeholder references for missing elements                      |
 | .exit()  | Removes nodes and adds them to the exit selection which can be later removed from the DOM |
 | .datum() | Injects data to the selected element without computing a join.                            |
+
+## Data Loading
+
+| Method    | Description                                                                                                                       |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| d3.csv()  | Sends http request to the specified url to load .csv file or data and executes callback function with parsed csv data objects.    |
+| d3.json() | Sends http request to the specified url to load .json file or data and executes callback function with parsed json data objects.  |
+| d3.tsv()  | Sends http request to the specified url to load a .tsv file or data and executes callback function with parsed tsv data objects.  |
+| d3.xml()  | Sends http request to the specified url to load an .xml file or data and executes callback function with parsed xml data objects. |

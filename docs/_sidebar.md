@@ -3,6 +3,7 @@
   - [D3](data_visualization/d3/)
     - [Animation](data_visualization/d3/animation)
     - [Data Binding](data_visualization/d3/data_binding)
+    - [Data Loading](data_visualization/d3/data_loading)
     - [Methods](data_visualization/d3/methods)
 - [Git](git/)
   - [Commands](git/commands)
