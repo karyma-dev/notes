@@ -11,7 +11,7 @@ element {
 }
 ```
 
-### Responsive Images
+## Responsive Images
 
 ```HTML
   <picture>
@@ -19,15 +19,4 @@ element {
     <source srcset="img/peace-pie-500.jpg" media="(min-width: 800px)"/>
     <img src="img/peace-pie-original.jpg" alt="The original peace pie"/>
   </picture>
-```
-
-#### Polyfill
-
-```HTML
-  <head>
-    <script>
-      document.createElement("picture")
-    </script>
-    <script src="picturefill.min.js"></script>
-  </head>
 ```

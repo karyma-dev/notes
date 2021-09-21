@@ -114,3 +114,94 @@ D3 simplifies the process of animations with transitions. Transitions are made o
 | d3.json() | Sends http request to the specified url to load .json file or data and executes callback function with parsed json data objects.  |
 | d3.tsv()  | Sends http request to the specified url to load a .tsv file or data and executes callback function with parsed tsv data objects.  |
 | d3.xml()  | Sends http request to the specified url to load an .xml file or data and executes callback function with parsed xml data objects. |
+
+## Scales
+
+```js
+var data = [100, 400, 300, 900, 850, 1000];
+
+var width = 500,
+  barHeight = 20,
+  margin = 1;
+
+var scale = d3
+  .scaleLinear()
+  .domain([d3.min(data), d3.max(data)])
+  .range([50, 500]);
+
+var svg = d3
+  .select("body")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", barHeight * data.length);
+
+var g = svg
+  .selectAll("g")
+  .data(data)
+  .enter()
+  .append("g")
+  .attr("transform", function (d, i) {
+    return "translate(0," + i * barHeight + ")";
+  });
+
+g.append("rect")
+  .attr("width", function (d) {
+    return scale(d);
+  })
+  .attr("height", barHeight - margin);
+
+g.append("text")
+  .attr("x", function (d) {
+    return scale(d);
+  })
+  .attr("y", barHeight / 2)
+  .attr("dy", ".35em")
+  .text(function (d) {
+    return d;
+  });
+```
+
+![Image](_media/scales.png)
+
+## Axes
+
+```js
+var width = 400,
+  height = 100;
+
+var data = [10, 15, 20, 25, 30];
+var svg = d3
+  .select("body")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+var xscale = d3
+  .scaleLinear()
+  .domain([0, d3.max(data)])
+  .range([0, width - 100]);
+
+var yscale = d3
+  .scaleLinear()
+  .domain([0, d3.max(data)])
+  .range([height / 2, 0]);
+
+var x_axis = d3.axisBottom().scale(xscale);
+
+var y_axis = d3.axisLeft().scale(yscale);
+
+svg.append("g").attr("transform", "translate(50, 10)").call(y_axis);
+
+var xAxisTranslate = height / 2 + 10;
+
+svg
+  .append("g")
+  .attr("transform", "translate(50, " + xAxisTranslate + ")")
+  .call(x_axis);
+```
+
+![Axes](_media/axes.png)
+
+## Resources
+
+More resources found on [Tutorialsteacher.com](https://www.tutorialsteacher.com/d3js/d3js-resources)
