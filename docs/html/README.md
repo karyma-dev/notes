@@ -1,6 +1,6 @@
 # HTML
 
-Hypertext Markup Language is the most basic building block of the Web, it defines the meaning and structure of web content.
+HTML stands for Hyper Text Markup Language. It is used for creating the structure of the webpage.
 
 ## HTML API
 

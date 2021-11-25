@@ -17,8 +17,6 @@
   - [HTML vs HTML5](html/differences)
   - [Seo](html/seo)
   - [SVG](html/svg)
-- [Interview](interview/)
-  - [HTML](interview/html)
 - [Java](java/)
 - [Javascript](javascript/)
   - [Libraries](javascript/library)
